@@ -6,7 +6,7 @@ fun main() {
         val factorial = calculateFactorial(number)
         println("The factorial of $number is: $factorial")
     } else {
-        println("Invalid input. Please enter a non-negative integer.")
+        println("Invalid input. Please enter a non-negative integer..")
     }
 }
 
