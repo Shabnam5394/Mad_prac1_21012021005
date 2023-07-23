@@ -1,20 +1,17 @@
-fun main() {
-    print("Enter a number: ")
-    val number = readLine()?.toIntOrNull()
-
-    if (number != null && number >= 0) {
-        val factorial = calculateFactorial(number)
-        println("The factorial of $number is: $factorial")
-    } else {
-        println("Invalid input. Please enter a non-negative integer..")
-    }
+fun main(args: Array<String>) {
+    print("Enter a  integer number: ")
+    val number= readLine()!!.toInt()
+    val factorial = fact(number)
+    println("Factorial of $number = $factorial")
 }
 
-tailrec fun calculateFactorial(n: Int, accumulator: Long = 1): Long {
-    return if (n == 0) {
-        accumulator
-    } else {
-        calculateFactorial(n - 1, n.toLong() * accumulator)
+
+fun fact(num: Int): Int {
+    return if(num == 1){
+        num
+    }
+    else{
+        num*fact(num-1)
     }
 }
 

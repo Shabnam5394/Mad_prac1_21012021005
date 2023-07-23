@@ -1,36 +1,22 @@
-fun main() {
-    print("Enter the first number: ")
-    val num1 = readLine()?.toDoubleOrNull()
-
-    print("Enter the second number: ")
-    val num2 = readLine()?.toDoubleOrNull()
-
-    if (num1 != null && num2 != null) {
-        println("Addition: ${add(num1, num2)}")
-        println("Subtraction: ${subtract(num1, num2)}")
-        println("Multiplication: ${multiply(num1, num2)}")
-        println("Division: ${divide(num1, num2)}")
-    } else {
-        println("Invalid input. Please enter valid numbers.")
-    }
+fun main(){
+    add(111, 2222, -222)
+    sub(111, 2222, -222)
+    mul(111, 2222, -222)
+    div(2222,111)
+    mod(2222,111)
 }
-
-fun add(num1: Double, num2: Double): Double {
-    return num1 + num2
+fun add(a:Int, b:Int, c:Int){
+    println("Addition of $a, $b, $c is ${a + b + c}")
 }
-
-fun subtract(num1: Double, num2: Double): Double {
-    return num1 - num2
+fun sub(a:Int, b:Int, c:Int){
+    println("Subtraction of $a, $b, $c is ${a - b - c}")
 }
-
-fun multiply(num1: Double, num2: Double): Double {
-    return num1 * num2
+fun mul(a:Int, b:Int, c:Int){
+    println("Multiplication of $a, $b, $c is ${a * b * c}")
 }
-
-fun divide(num1: Double, num2: Double): Double {
-    if (num2 != 0.0) {
-        return num1 / num2
-    } else {
-        throw IllegalArgumentException("Division by zero is not allowed.")
-    }
+fun div(a:Int, b:Int){
+    println("Division of $a, $b is ${a / b}")
+}
+fun mod(a:Int, b:Int){
+    println("Modulus of $a, $b is ${a % b}")
 }
